@@ -16,3 +16,4 @@ spec:
         - name: pace
           image: oajojjj/pace:latest
           ports:
+          - containerPort: 80
