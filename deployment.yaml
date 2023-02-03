@@ -4,7 +4,7 @@ metadata:
   name: pace-deployment
 spec:
     selector:
-      matchlabels: 
+      matchLabels: 
         app: pace
     replicas: 3
     template:
