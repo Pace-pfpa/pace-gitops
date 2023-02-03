@@ -1,4 +1,4 @@
-apiversion: argoproject.io/v1alpha1
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: pace-argo-application
@@ -8,6 +8,7 @@ spec:
   source:
     repoURL: https://github.com/Lobato-s-Costa-s-company-ltd/tcc-back-config.git
     targetRevision: HEAD
+    path: ./
     
   destination:
     server: https://kubernetes.default.svc
