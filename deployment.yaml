@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: pace-deployment
 spec:
+    selector:
+      matchlabels: pace
   replicas: 3
   template:
     metadata:
