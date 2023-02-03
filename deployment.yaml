@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pace-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: pace
+    spec:
+      containers:
+      - name: pace
+        image: oajojjj/pace:1.0
+        ports:
+        - containerPort: 80

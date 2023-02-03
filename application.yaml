@@ -1,0 +1,21 @@
+apiversion: argoproject.io/v1alpha1
+kind: Application
+metadata:
+  name: pace-argo-application
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Lobato-s-Costa-s-company-ltd/tcc-back-config.git
+    targetRevision: HEAD
+    
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: pace
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune: true
