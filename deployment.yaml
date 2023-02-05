@@ -14,6 +14,6 @@ spec:
       spec:
         containers:
         - name: pace
-          image: oajojjj/pace:latest
+          image: oajojjj/pace:1675440563
           ports:
           - containerPort: 80
