@@ -1,5 +1,6 @@
 name: Repository Dispatch
 on:
+  workflow_dispatch:
   repository_dispatch:
     types: [update]
 jobs:
@@ -12,6 +13,6 @@ jobs:
         with:
           valueFile: 'deployment.yaml'
           propertyPath: 'spec.template.spec.containers.image'
-          value: 'oajojjj/pace:${{ github.event.client_payload.TAG }}'
+          value: 'oajojjj/pace:v1.1.4'
           branch: main
-          message: 'Updated image version to ${{ github.event.client_payload.TAG }}'
+          message: 'Updated image version to v1.1.4'
