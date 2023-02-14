@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: 123
+kind: Deployment
 metadata:
   name: pace-deployment
 spec:
