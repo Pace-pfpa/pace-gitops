@@ -12,7 +12,7 @@ jobs:
         uses: fjogeleit/yaml-update-action@main
         with:
           valueFile: 'deployment.yaml'
-          propertyPath: 'spec.template.spec.containers.image'
+          propertyPath: 'kind'
           value: 'oajojjj/pace:v1.1.4'
           branch: main
           message: 'Updated image version to v1.1.4'
