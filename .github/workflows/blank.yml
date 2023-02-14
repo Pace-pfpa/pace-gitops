@@ -12,7 +12,7 @@ jobs:
         uses: fjogeleit/yaml-update-action@main
         with:
           valueFile: 'deployment.yaml'
-          propertyPath: 'kind'
-          value: 'oajojjj/pace:v1.1.4'
+          propertyPath: 'spec.template.spec.containers.0.image'
+          value: 'oajojjj/pace:${{ github.event.client_payload.TAG }}'
           branch: main
-          message: 'Updated image version to v1.1.4'
+          message: 'Updated image version to ${{ github.event.client_payload.TAG }}'
