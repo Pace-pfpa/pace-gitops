@@ -13,4 +13,5 @@ jobs:
           valueFile: 'deployment.yaml'
           propertyPath: 'spec.template.spec.containers.image'
           value: 'oajojjj/pace:${{ github.event.client_payload.TAG }}'
-          commitChange: false
+          branch: main
+          message: 'Updated image version to ${{ github.event.client_payload.TAG }}'
