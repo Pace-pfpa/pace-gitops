@@ -8,5 +8,3 @@ spec:
     app: pace
   ports:
     - nodePort: 30163
-      port: 8080
-      targetPort: 8080
