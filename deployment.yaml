@@ -1,19 +1,19 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: oajojjj/pace:v1.1.4
 metadata:
   name: pace-deployment
 spec:
-    selector:
-      matchLabels: 
+  selector:
+    matchLabels:
+      app: pace
+  replicas: 2
+  template:
+    metadata:
+      labels:
         app: pace
-    replicas: 2
-    template:
-      metadata:
-        labels:
-          app: pace
-      spec:
-        containers:
+    spec:
+      containers:
         - name: pace
           image: oajojjj/pace:latest
           ports:
-          - containerPort: 8080
+            - containerPort: 8080
