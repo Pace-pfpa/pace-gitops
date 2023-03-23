@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Lobato-s-Costa-s-company-ltd/tcc-back-config.git
+    repoURL: https://github.com/Pace-pfpa/pace-devops.git
     targetRevision: HEAD
     path: ./
     
