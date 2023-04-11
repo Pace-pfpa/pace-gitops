@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: pace
-          image: 'oajojjj/pace:'
+          image: oajojjj/pace:v2.0.0
           ports:
             - containerPort: 8080
