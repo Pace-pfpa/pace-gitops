@@ -1,0 +1,18 @@
+name: Update Artifact Deployed Image Version
+on:
+  repository_dispatch:
+    types: [update]
+jobs:
+  update-artifact-deployed-image-version:
+    name: Update Artifact Deployed Image Version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Update Image Version on Yaml File
+        uses: fjogeleit/yaml-update-action@main
+        with:
+          valueFile: 'deployment.yaml'
+          propertyPath: 'spec.template.spec.containers.0.image'
+          value: '${{ vars.DOCKER_REPOSITORY }}:${{ github.event.client_payload.TAG }}'
+          branch: main
+          message: 'Updated image version to ${{ github.event.client_payload.TAG }}'
